@@ -1,37 +1,42 @@
 import sys
 import os
+import joblib  # 用于保存流水线模型
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.naive_bayes import GaussianNB
 
-# 将项目根目录添加到系统路径，确保模块导入正常
+from src.models.naive_bayes import NaiveBayesModel
+
+# 将项目根目录添加到系统路径
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.preprocess import load_and_split_data
-from src.models.naive_bayes import NaiveBayesModel
+from src.preprocess import get_raw_splits
 from src.utils import evaluate_model, get_error_analysis
+from src.config import MODEL_SAVE_PATH
 
 
 def main():
-    # 1. 数据预处理
-    X_train, X_test, y_train, y_test, raw_df = load_and_split_data()
 
-    # 2. 模型初始化与训练
-    nb_experiment = NaiveBayesModel()
-    nb_experiment.train(X_train, y_train)
+    # 获取原始拆分数据
+    X_train, X_test, y_train, y_test, raw_df = get_raw_splits()
 
-    # 3. 执行预测
-    y_pred = nb_experiment.predict(X_test)
-    y_prob = nb_experiment.predict_proba(X_test)
+    # 直接调用封装好的类
+    nb_research = NaiveBayesModel(use_scaler=True)
 
-    # 4. 评估结果
-    evaluate_model(y_test, y_pred, y_prob, model_name="Gaussian Naive Bayes V1.0")
+    # 训练与预测
+    nb_research.train(X_train, y_train)
+    y_pred = nb_research.predict(X_test)
+    y_prob = nb_research.predict_proba(X_test)
 
-    # 5. 错误追溯分析
+    # 评估
+    evaluate_model(y_test, y_pred, y_prob, model_name="Gaussian Naive Bayes V2.0")
+
+    # 错误追溯分析
     fn_df, fp_df = get_error_analysis(X_test, y_test, y_pred, raw_df)
-    print(f"\n[分析] 漏报样本数: {len(fn_df)} | 误报样本数: {len(fp_df)}")
+    print(f"\n[分析] 漏报样本数 (FN): {len(fn_df)} | 误报样本数 (FP): {len(fp_df)}")
 
-    # 6. 保存模型
-    nb_experiment.save_model("phish_nb_v1.pkl")
-    print("\n 实验结束，模型已保存。")
-
+    # 保存整个流水线
+    nb_research.save_model("phish_nb_v2.pkl")
 
 if __name__ == "__main__":
     main()

@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da3d680-3568-4b16-be46-9d152424fa18" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/data/PhiUSIIL_Phishing_URL_Dataset.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiments/exp_v1_nb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/naive_bayes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/preprocess.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Malicious-Website-Detection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Malicious-Website-Detection.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="3da3d680-3568-4b16-be46-9d152424fa18" name="更改" comment="Gaussian Naive Bayes V1.0">
+      <change afterPath="$PROJECT_DIR$/experiments/exp_v2_rf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/exp_v1_nb.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/exp_v1_nb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/naive_bayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/naive_bayes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocess.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +109,30 @@
       <option name="presentableId" value="Default" />
       <updated>1773938695541</updated>
     </task>
+    <task id="LOCAL-00001" summary="Gaussian Naive Bayes V1.0">
+      <option name="closed" value="true" />
+      <created>1773941751962</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1773941751962</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Gaussian Naive Bayes V1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gaussian Naive Bayes V1.0" />
   </component>
 </project>

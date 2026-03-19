@@ -3,9 +3,10 @@ from sklearn.model_selection import train_test_split
 from .config import DATA_PATH, RANDOM_STATE, TEST_SIZE, METADATA_COLS, LABEL_COL
 
 
-def load_and_split_data():
+def get_raw_splits():
     """
-    从指定路径加载数据集，并进行特征提取与分层拆分。
+        仅负责基础的数据加载和分层拆分，保持数据的原始性。
+        预处理步骤将由后续的 Pipeline 统一管理。
     """
     # 读取原始数据
     df = pd.read_csv(DATA_PATH)
