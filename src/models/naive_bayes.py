@@ -29,6 +29,9 @@ class NaiveBayesModel:
 
     def predict_proba(self, X_test):
         """获取预测概率，用于计算AUC"""
+        if not self._is_fitted:
+            raise RuntimeError("模型尚未训练")
+            # 直接获取正类概率
         return self.model.predict_proba(X_test)[:, 1]
 
     def save_model(self, filename="phish_nb.pkl"):
