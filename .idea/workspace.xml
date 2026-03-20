@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3da3d680-3568-4b16-be46-9d152424fa18" name="更改" comment="Gaussian Naive Bayes V1.0">
-      <change afterPath="$PROJECT_DIR$/experiments/exp_v2_rf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/exp_v1_nb.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/exp_v1_nb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/naive_bayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/naive_bayes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocess.py" afterDir="false" />
+    <list default="true" id="3da3d680-3568-4b16-be46-9d152424fa18" name="更改" comment="Gaussian Naive Bayes V2.0，新增load_model">
+      <change afterPath="$PROJECT_DIR$/src/models/random_forest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/exp_v1_nb.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/exp_nb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/exp_v2_rf.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/exp_rf.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,21 +25,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Mal-Suen"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Mal-Suen&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Mal-Suen/Malicious-Website-Detection.git",
-    "accountId": "e0032a28-d8f8-4c72-8e06-ceb9519da8db"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mal-Suen/Malicious-Website-Detection.git&quot;,
+    &quot;accountId&quot;: &quot;e0032a28-d8f8-4c72-8e06-ceb9519da8db&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="3BAjJJIU79YRWWZW1Wt56A0l9Ox" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -51,6 +51,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.exp_nb (1).executor": "Run",
+    "Python.exp_rf.executor": "Run",
     "Python.exp_v1_nb.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -65,8 +67,8 @@
       <recent name="E:\PycharmProjects\Malicious-Website-Detection\data" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="exp_v1_nb" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.exp_rf">
+    <configuration name="exp_nb (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Malicious-Website-Detection" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,7 +81,51 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/exp_v1_nb.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/exp_nb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exp_nb" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Malicious-Website-Detection" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="E:\PycharmProjects\Malicious-Website-Detection\experiments\exp_nb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exp_rf" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Malicious-Website-Detection" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/exp_rf.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,7 +136,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.exp_v1_nb" />
+        <item itemvalue="Python.exp_rf" />
+        <item itemvalue="Python.exp_nb (1)" />
+        <item itemvalue="Python.exp_nb" />
       </list>
     </recent_temporary>
   </component>
@@ -117,7 +165,31 @@
       <option name="project" value="LOCAL" />
       <updated>1773941751962</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Gaussian Naive Bayes V2.0">
+      <option name="closed" value="true" />
+      <created>1773959323866</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773959323866</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Gaussian Naive Bayes V2.0">
+      <option name="closed" value="true" />
+      <created>1773959473105</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773959473105</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Gaussian Naive Bayes V2.0，新增load_model">
+      <option name="closed" value="true" />
+      <created>1773959850034</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773959850034</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +205,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Gaussian Naive Bayes V1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gaussian Naive Bayes V1.0" />
+    <MESSAGE value="Gaussian Naive Bayes V2.0" />
+    <MESSAGE value="Gaussian Naive Bayes V2.0，新增load_model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gaussian Naive Bayes V2.0，新增load_model" />
   </component>
 </project>
