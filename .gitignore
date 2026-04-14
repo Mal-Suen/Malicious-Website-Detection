@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.env
+*.env
+
+# Model files (optional - uncomment to ignore)
+# saved_models/*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (large files)
+*.csv.gz
+*.parquet
